@@ -21,4 +21,6 @@ class Customer(db.Model):
     created_at = db.Column(db.DateTime, nullable=False, server_default=db.func.now())
 
 
-    
+    def __repr__(self):
+        return f"<Customer {self.first_name} {self.last_name}>"
+   
